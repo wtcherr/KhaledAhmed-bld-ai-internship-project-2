@@ -41,65 +41,7 @@
   border: 1px solid;
   border-color: var(--secondary-border-color);
 }
-.rating-color {
-  color: var(--rating-color);
-}
 .flex-horizontal {
   display: flex;
   justify-content: space-around;
-}
-a {
-  text-decoration: none;
-  color: var(--primary-font-color);
-}
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  margin-bottom: 17px;
-  font-size: 32px;
-  font-weight: 700;
-}
-h2 {
-  margin-bottom: 15px;
-}
-h4 {
-  font-size: 16px;
-  font-weight: bold;
-}
-h5 {
-  font-weight: 100;
-  font-size: 12px;
-}
-p {
-  margin-bottom: 12px;
-}
-.courses {
-  padding: 18px;
-  margin: 18px;
-}
-.explore-btn {
-  padding: 10px;
-  background-color: transparent;
-}
-.explore-btn:hover {
-  background-color: var(--logo-color);
-}
-.course-card {
-  width: 20%;
-  min-width: 180px;
-}
-.course-card a {
-  text-decoration: none;
-}
-.course-card img {
-  max-width: 95%;
-  border: 1px solid var(--secondary-border-color);
-}
-.rating {
-  width: fit-content;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-.courses-wrapper {
-  display: flex;
-  flex-wrap: wrap;
 }
