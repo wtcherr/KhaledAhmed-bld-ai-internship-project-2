@@ -1,6 +1,12 @@
-import React, { Component } from "react";
-function App() {
-  return <h1>Hello World!</h1>;
-}
+import React from "react";
+import "./App.css";
+import Home from "./Pages/Home";
 
+function App() {
+  return (
+    <>
+      <Home />
+    </>
+  );
+}
 export default App;

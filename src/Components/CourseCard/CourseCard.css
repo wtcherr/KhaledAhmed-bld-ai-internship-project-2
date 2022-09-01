@@ -1,0 +1,31 @@
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+h5 {
+  font-weight: 100;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+.course-card {
+  width: 20%;
+  min-width: 180px;
+}
+.course-card a {
+  text-decoration: none;
+}
+.course-card img {
+  max-width: 95%;
+  border: 1px solid var(--secondary-border-color);
+}
+.rating {
+  width: fit-content;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.rating-color {
+  color: var(--rating-color);
+}
