@@ -10,6 +10,7 @@ import "./CoursePage.css";
 import { CoursesContext } from "../App";
 import { useParams } from "react-router-dom";
 import LandingPageBody from "../Components/LandingPageBody/LandingPageBody";
+import Footer from "../Components/Footer/Footer";
 function CoursePage() {
   const getCourseById = (courseId, courses) => {
     return courses.find((course) => course.id === courseId);
@@ -31,6 +32,7 @@ function CoursePage() {
       <ShortcutNavigation />
       <CourseBanner {...course} />
       <LandingPageBody {...course} />
+      <Footer />
     </div>
   );
 }
