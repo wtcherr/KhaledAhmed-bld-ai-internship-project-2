@@ -12,7 +12,10 @@
   --secondary-font-color: #95999c;
   --primary-border-color: #1c1d1f;
   --secondary-border-color: #d1d7dc;
+  --ternary-border-color: #e7ecf0;
   --logo-color: #b55bf3;
+  --secondary-logo-color: #cec0fc;
+  --darker-logo-color: #8e11e0;
   --rating-color: #e59819;
 }
 .bold {
@@ -44,4 +47,16 @@
 .flex-horizontal {
   display: flex;
   justify-content: space-around;
+}
+.flex-vertical {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.simple-text {
+  font-size: 14px;
+}
+.gap {
+  width: fit-content;
+  gap: 5px;
 }

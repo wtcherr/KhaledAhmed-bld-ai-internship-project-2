@@ -1,0 +1,27 @@
+.show-more {
+  width: 100%;
+}
+.show-more-text {
+  white-space: pre-wrap;
+}
+.show-more-less-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  color: var(--darker-logo-color);
+}
+.show-more-less-btn:hover {
+  color: #6b0caa;
+}
+.expanded {
+  height: inherit;
+}
+.not-expanded {
+  height: 160px;
+  overflow: hidden;
+}
+.not-expanded::before {
+  background: linear-gradient(to top, red, rgba(255, 255, 255, 0));
+}

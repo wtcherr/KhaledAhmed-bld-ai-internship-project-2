@@ -1,0 +1,19 @@
+h2 {
+  margin-bottom: 15px;
+}
+p {
+  margin-bottom: 12px;
+}
+.courses {
+  padding: 28px;
+}
+.explore-btn {
+  padding: 10px;
+  background-color: transparent;
+}
+.explore-btn:hover {
+  background-color: var(--logo-color);
+}
+.page-paragraph {
+  width: 65%;
+}

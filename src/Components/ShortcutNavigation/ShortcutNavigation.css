@@ -1,0 +1,30 @@
+.not-docked-shortcuts {
+  position: relative;
+}
+.docked-shortcuts {
+  position: fixed;
+  top: 70px;
+}
+.shortcuts-tab {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding-left: 110px;
+  border-bottom: 1px solid var(--secondary-border-color);
+  z-index: 1;
+}
+.shortcut-btn {
+  width: 13.4%;
+  padding: 16px 0px;
+  color: var(--secondary-font-color);
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shortcut-btn:hover {
+  padding: 14px 0px;
+  border-bottom: 2px solid black;
+  color: var(--primary-font-color);
+}

@@ -1,0 +1,19 @@
+.billboard {
+  position: relative;
+}
+.billboard img {
+  width: 100%;
+}
+.billboard-content {
+  background-color: white;
+  position: absolute;
+  top: 64px;
+  left: 72px;
+  width: 380px;
+  padding: 28px 28px;
+  box-shadow: 5px 5px 30px var(--secondary-font-color);
+}
+.billboard-content p {
+  font-family: sans-serif;
+  font-size: 19px;
+}

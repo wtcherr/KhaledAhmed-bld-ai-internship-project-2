@@ -1,0 +1,34 @@
+.student-feedback {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  width: 58%;
+}
+.total-feedback {
+  width: 18%;
+}
+.feedback-bars {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.feedback-bar {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.bar-empty {
+  background-color: var(--secondary-border-color);
+  width: 65%;
+  height: 8px;
+}
+.bar-filled {
+  height: 100%;
+  background-color: #6a6f73;
+}
+.percent-text {
+  color: var(--darker-logo-color);
+  text-decoration: underline;
+}

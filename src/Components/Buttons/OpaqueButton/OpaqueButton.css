@@ -1,0 +1,12 @@
+.opaque-btn {
+  background-color: var(--logo-color);
+  color: white;
+  padding: 16px 0px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.opaque-btn:hover {
+  background-color: var(--darker-logo-color);
+}
