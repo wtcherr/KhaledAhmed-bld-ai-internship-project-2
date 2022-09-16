@@ -1,5 +1,4 @@
 import { Skeleton } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
 import React from "react";
 import ReviewerCard from "../ReviewerCard/ReviewerCard";
 import StudentFeedback from "../StudentFeedback/StudentFeedback";

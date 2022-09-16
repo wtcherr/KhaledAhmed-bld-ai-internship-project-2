@@ -7,7 +7,7 @@ import { useEffect } from "react";
 function Home() {
   const [courses, setCourses] = useState();
   const [filteredCourses, setFilteredCourses] = useState();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const coursesList = useContext(CoursesContext);
   const loading = courses === undefined || Object.entries(courses).length === 0;
 
@@ -22,7 +22,7 @@ function Home() {
     } else {
       setFilteredCourses(courses);
     }
-  });
+  }, [loading, searchParams, coursesList, courses]);
 
   return (
     <>

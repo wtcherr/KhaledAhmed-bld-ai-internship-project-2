@@ -22,7 +22,7 @@ function CoursePage() {
   useEffect(() => {
     let curCourse = getCourseById(courseId, courses);
     setCourse(curCourse);
-  }, [courses]);
+  }, [courseId, courses]);
   const loading = course === undefined || Object.entries(course).length === 0;
   if (!loading) document.title = course.title + " | Udemy";
   return (

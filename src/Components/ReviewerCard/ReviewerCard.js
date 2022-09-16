@@ -1,6 +1,6 @@
 import React from "react";
 import "./ReviewerCard.css";
-import { Avatar, Skeleton } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { Rating } from "@mui/material";
 import { StarBorder } from "@mui/icons-material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";

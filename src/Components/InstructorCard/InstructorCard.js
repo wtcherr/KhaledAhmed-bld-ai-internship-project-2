@@ -7,10 +7,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import { PlayCircle } from "@mui/icons-material";
 import ThousandsSeparator from "../ThousandsSeparator/ThousandsSeparator";
 import ShowMore from "../ShowMore/ShowMore";
-import Skeleton from "@mui/material";
-import ReactMarkdown from "react-markdown";
 export default function InstructorCard({ instructor }) {
-  let loading = Object.entries(instructor).length === 0;
   return (
     <div className="instructor-card">
       <a href="#">

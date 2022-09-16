@@ -7,7 +7,7 @@ import CoursePage from "./Pages/CoursePage";
 export const CoursesContext = React.createContext();
 function App() {
   const [courses, setCourses] = useState([]);
-  let server_link = "https://api.npoint.io/3875695f0514545d24a1";
+  const server_link = "https://api.npoint.io/3875695f0514545d24a1";
   useEffect(() => {
     //TODO this is a temp link
     fetch(server_link)

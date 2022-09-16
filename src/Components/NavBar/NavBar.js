@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import {
@@ -27,11 +27,12 @@ function NavBar() {
   );
 }
 const SearchBar = () => {
-  let [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const searchInput = useRef(null);
   const processSearch = (e) => {
     e.preventDefault();
-    let filter = e.target.querySelector("input").value;
+    let filter = searchInput.current.value;
     navigate({
       pathname: "/",
       search: createSearchParams({
@@ -46,6 +47,7 @@ const SearchBar = () => {
           <i className="fa fa-search"></i>
         </button>
         <input
+          ref={searchInput}
           type="text"
           className="input-field"
           placeholder={searchParams.get("name") || "Search for anything"}
