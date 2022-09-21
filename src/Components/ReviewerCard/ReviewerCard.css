@@ -1,0 +1,32 @@
+.reviewer-card {
+  width: 58%;
+  border-bottom: 1px solid var(--secondary-border-color);
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.rating-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.review-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.time-ago {
+  color: var(--secondary-font-color);
+}
+.review-text {
+  color: var(--primary-font-color);
+}
+.like-dislike {
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+}
+.like-dislike small {
+  cursor: pointer;
+  text-decoration: underline;
+}

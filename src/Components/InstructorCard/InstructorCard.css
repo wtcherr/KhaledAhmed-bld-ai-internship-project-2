@@ -1,0 +1,34 @@
+.instructor-card {
+  background-color: white;
+  margin-top: 10px;
+  width: 58%;
+}
+.instructor-card a {
+  text-decoration: underline;
+  color: var(--darker-logo-color);
+}
+.instructor-card a:hover {
+  color: #6307a0;
+}
+.instructor-job {
+  color: var(--secondary-font-color);
+}
+.instructor-img-stats {
+  margin: 10px 0 16px 0;
+  display: flex;
+  gap: 20px;
+}
+.stat {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.avatar {
+  display: none;
+}
+.wrap-text {
+  white-space: pre-wrap;
+}
+.instructor-description-text {
+  color: var(--primary-font-color);
+}

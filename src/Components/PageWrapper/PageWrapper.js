@@ -1,24 +1,17 @@
 import React from "react";
-import CoursesWrapper from "../CourseWrapper/CourseWrapper";
+import CoursesSection from "../CoursesSection/CoursesSection";
 import "./PageWrapper.css";
-
-const PageWrapper = (props) => {
+function PageWrapper(props) {
   return (
-    <div className="secondary-border-color courses">
-      <h2>Expand your career opportunities with Python</h2>
-      <p className="page-paragraph">
-        Take one of Udemy's range of python courses and learn how to code using
-        this incredibly useful language. its simple syntax and readability makes
-        Python perfect for Flask, Django, data science, and machine learning.
-        You'll learn how to build everything from games to sites to apps. Choose
-        from a range of courses that will appeal to...
+    <div className="page-wrapper">
+      <h1>A board selection of courses</h1>
+      <p>
+        Choose from 185,000 online video courses with new addition published
+        every month
       </p>
-      <button className="explore-btn bold secondary-border-color margin-bottom-28">
-        Explore Python
-      </button>
-      <CoursesWrapper Courses={props.Courses} />
+      <CoursesSection courses={props.courses} />
     </div>
   );
-};
+}
 
 export default PageWrapper;

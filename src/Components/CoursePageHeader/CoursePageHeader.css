@@ -1,0 +1,9 @@
+.course-header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primary-border-color);
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+}

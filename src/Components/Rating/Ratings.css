@@ -1,0 +1,13 @@
+.rating {
+  width: fit-content;
+  align-items: center;
+}
+h4 {
+  font-size: 14px;
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.reviews {
+  color: var(--secondary-font-color);
+}

@@ -1,57 +1,34 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import Billboard from "../Components/Billboard/Billboard";
 import PageWrapper from "../Components/PageWrapper/PageWrapper";
-
-const CoursesList = [
-  {
-    id: 1,
-    title: "100 Days of Code: The Complete Python Pro Bootcamp for 2022",
-    link: "https://www.udemy.com/course/100-days-of-code/",
-    img: "https://img-b.udemycdn.com/course/240x135/2776760_f176_10.jpg",
-    instructor: "Dr. Angela Yu",
-    rating: 4.7,
-    price: 229.99,
-  },
-
-  {
-    id: 2,
-    title: "The Complete 2022 Web Development Bootcamp",
-    link: "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
-    img: "https://img-b.udemycdn.com/course/240x135/1565838_e54e_16.jpg",
-    instructor: "Dr. Angela Yu",
-    rating: 4.7,
-    price: 269.99,
-  },
-  {
-    id: 3,
-    title: "Python for Data Science and Machine Learning Bootcamp",
-    link: "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/",
-    img: "https://img-b.udemycdn.com/course/240x135/903744_8eb2.jpg",
-    instructor: "Jose Portilla",
-    rating: 1.5,
-    price: 229.99,
-  },
-  {
-    id: 4,
-    title: "Complete Python Developer in 2022: Zero to Mastery",
-    link: "https://www.udemy.com/course/complete-python-developer-zero-to-mastery/",
-    img: "https://img-b.udemycdn.com/course/240x135/2473048_8255_5.jpg",
-    instructor: "Andrei Neagoie, Zero To Mastery",
-    rating: 4.7,
-    price: 269.99,
-  },
-  {
-    id: 5,
-    title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
-    link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
-    img: "https://img-b.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
-    instructor:
-      "Academind by Maximilian Schwarzmüller, Maximilian Schwarzmüller",
-    rating: 4.6,
-    price: 229.99,
-  },
-];
-
+import { useSearchParams } from "react-router-dom";
+import { CoursesContext } from "../App";
+import { useEffect } from "react";
 function Home() {
-  return <PageWrapper Courses={CoursesList} />;
+  const [courses, setCourses] = useState();
+  const [filteredCourses, setFilteredCourses] = useState();
+  const [searchParams] = useSearchParams();
+  const coursesList = useContext(CoursesContext);
+  const loading = courses === undefined || Object.entries(courses).length === 0;
+
+  useEffect(() => {
+    setCourses(coursesList);
+    const filtername = searchParams.get("name");
+    if (filtername !== null && filtername !== undefined && !loading) {
+      const regex = RegExp(filtername.toLowerCase());
+      setFilteredCourses(
+        courses.filter((course) => regex.test(course.title.toLowerCase()))
+      );
+    } else {
+      setFilteredCourses(courses);
+    }
+  }, [loading, searchParams, coursesList, courses]);
+
+  return (
+    <>
+      <Billboard />
+      <PageWrapper courses={filteredCourses} />
+    </>
+  );
 }
 export default Home;
